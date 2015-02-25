@@ -21,14 +21,15 @@ $(document).ready(function () {
 	}
 
 	if(isNaN(numEntry) == true) {
-		alert('Please make sure you have entered a number correctly.');
-		return stringEntry;
+		alert('Please make sure you have entered an actual number.');
+		window.location.reload();
 	}
 
 	else if(numEntry % 1 != 0) {
 		alert('Please only enter whole numbers without decimals.');
-		return stringEntry;
+		window.location.reload();
 	}
+	
 	else {
 		fizzBuzz(numEntry);
 	}
